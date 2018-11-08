@@ -35,6 +35,14 @@ def print_singly_linked_list(node, sep, fptr):
 #     SinglyLinkedListNode next
 #
 #
+def insertNodeAtHead(head, data):
+    if head == None:
+        return SinglyLinkedListNode(data)
+    else:
+        newnode = SinglyLinkedListNode(data)
+        newnode.next = head
+        return newnode
+
 def insertNodeAtTail(head, data):
     #need something that will allow it to reference what llist is.
     #base case if there is nothing at all in the linked list
