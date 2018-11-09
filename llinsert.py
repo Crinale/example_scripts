@@ -56,6 +56,21 @@ def insertNodeAtTail(head, data):
             #if the next node has something keep going until you see none in the next
             insertNodeAtTail(head.next,data)
         return head
+
+def insertNodeAtPosition(head, data, position):
+    if head == None:
+        return head
+    newNode = SinglyLinkedListNode(data)
+    count = 0
+    curNode = head
+    while curNode is not None:
+        if count == position-1:
+            temp = curNode.next
+            curNode.next = newNode
+            curNode.next.next = temp
+            return head
+        curNode = curNode.next
+        count += 1
         
 
 if __name__ == '__main__':
@@ -74,3 +89,4 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
+
