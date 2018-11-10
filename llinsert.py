@@ -14,6 +14,7 @@ class SinglyLinkedListNode:
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
 
 def print_singly_linked_list(node, sep, fptr):
@@ -71,7 +72,25 @@ def insertNodeAtPosition(head, data, position):
             return head
         curNode = curNode.next
         count += 1
-        
+
+def deleteNode(head, position):
+    if head == None:
+        return head
+    else:
+        count = 0
+        curnode = head
+        while curnode is not None:
+            if position == 0:
+                return curnode.next
+            if count == position-1:
+                if curnode.next is not None:
+                    curnode.next = curnode.next.next
+     #           if curnode.next == None:
+     #               return None:
+ 
+                return head
+            curnode = curnode.next
+            count += 1
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
