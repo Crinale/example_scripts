@@ -47,7 +47,6 @@ class Solution:
             for current in q:
                 if current:
                     print(current.data),
-
                     q.append(current.left)
                     q.append(current.right)
 

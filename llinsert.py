@@ -85,8 +85,7 @@ def deleteNode(head, position):
             if count == position-1:
                 if curnode.next is not None:
                     curnode.next = curnode.next.next
-     #           if curnode.next == None:
-     #               return None:
+
  
                 return head
             curnode = curnode.next
