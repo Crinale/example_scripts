@@ -2,7 +2,7 @@ from __future__ import division
 
 def average(array):
     # your code goes here
-    print sum(set(array))/len(set(array))
+    return sum(set(array))/len(set(array))
 
 if __name__ == '__main__':
     n = int(raw_input())
